@@ -2,7 +2,9 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Product from "./Pages/Product";
 import Pricing from "./Pages/Pricing";
 import Homepage from "./Pages/Homepage";
-import Invalidpage from "./Pages/Invalidpage";
+import Login from "./Pages/Login";
+import PageNotFound from "./Pages/PageNotFound";
+import AppLayout from "./Pages/AppLayout";
 
 function App(){
 
@@ -12,7 +14,10 @@ function App(){
       <Route path="/" element={<Homepage />} />
       <Route path="product" element={<Product />} />
       <Route path="pricing" element={<Pricing />} />
-      <Route path="*" element={<Invalidpage />} />
+      <Route path="login" element={<Login />} />
+
+      <Route path="app" element={<AppLayout/>} />
+      <Route path="*" element={<PageNotFound />} />
     </Routes>
     </BrowserRouter>
   )
